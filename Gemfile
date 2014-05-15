@@ -29,11 +29,13 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'haml-rails'
 
-gem 'twitter-bootstrap-rails'
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 
 gem 'rspec-rails'
 
-gem 'cucumber-rails'
+group :test do
+  gem 'cucumber-rails', require: false
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
