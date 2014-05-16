@@ -1,4 +1,12 @@
 = form_for @driver, :html => { :class => 'form-horizontal' } do |f|
+  - if @driver.errors.any?
+    #error_explanation
+      #h2
+        = pluralize(@driver.errors.count, 'error')
+        prohibited this driver from being saved:
+      %ul
+        - @driver.errors.full_messages.each do |msg|
+          %li #{msg}
   .control-group
     = f.label :name, :class => 'control-label'
     .controls
