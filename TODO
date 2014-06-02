@@ -1,0 +1,16 @@
+MODELS
+  Driver
+    Name
+    ?
+  Route
+    Date
+    Trip #
+    Advances
+    Reimbursements
+    Gross Revenue
+    Net Revenue
+  User
+    Driver?
+    Admin
+  Trailer
+
