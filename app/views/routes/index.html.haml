@@ -1,0 +1,29 @@
+%h1 Listing routes
+
+%table
+  %tr
+    %th Date
+    %th Trip num
+    %th Advance
+    %th Reimbursement
+    %th Gross rev
+    %th Net rev
+    %th
+    %th
+    %th
+
+  - @routes.each do |route|
+    %tr
+      %td= route.date
+      %td= route.trip_num
+      %td= route.advance
+      %td= route.reimbursement
+      %td= route.gross_rev
+      %td= route.net_rev
+      %td= link_to 'Show', route
+      %td= link_to 'Edit', edit_route_path(route)
+      %td= link_to 'Destroy', route, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Route', new_route_path

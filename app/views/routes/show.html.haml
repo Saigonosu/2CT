@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @route.date
+%p
+  %b Trip num:
+  = @route.trip_num
+%p
+  %b Advance:
+  = @route.advance
+%p
+  %b Reimbursement:
+  = @route.reimbursement
+%p
+  %b Gross rev:
+  = @route.gross_rev
+%p
+  %b Net rev:
+  = @route.net_rev
+
+= link_to 'Edit', edit_route_path(@route)
+\|
+= link_to 'Back', routes_path

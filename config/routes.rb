@@ -1,4 +1,8 @@
 Trucking::Application.routes.draw do
+  resources :users
+
+  resources :routes
+
   resources :drivers
 
 
