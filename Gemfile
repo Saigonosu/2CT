@@ -35,6 +35,8 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 
 gem 'rspec-rails'
 
+gem 'font-awesome-rails'
+
 group :test do
   gem 'cucumber-rails', require: false
 end
