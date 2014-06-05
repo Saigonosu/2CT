@@ -1,0 +1,28 @@
+= form_for @route, :html => { :class => 'form-horizontal' } do |f|
+  .control-group
+    = f.label :date, :class => 'control-label'
+    .controls
+      = f.text_field :date, :class => 'text_field'
+  .control-group
+    = f.label :trip_num, :class => 'control-label'
+    .controls
+      = f.text_field :trip_num, :class => 'text_field'
+  .control-group
+    = f.label :advance, :class => 'control-label'
+    .controls
+      = f.text_field :advance, :class => 'text_field'
+  .control-group
+    = f.label :reimbursement, :class => 'control-label'
+    .controls
+      = f.text_field :reimbursement, :class => 'text_field'
+  .control-group
+    = f.label :gross_rev, :class => 'control-label'
+    .controls
+      = f.text_field :gross_rev, :class => 'text_field'
+  .control-group
+    = f.label :net_rev, :class => 'control-label'
+    .controls
+      = f.text_field :net_rev, :class => 'text_field'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), route_path, :class => 'btn'

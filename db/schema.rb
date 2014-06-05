@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140515005525) do
+ActiveRecord::Schema.define(version: 20140602230428) do
 
   create_table "drivers", force: true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "routes", force: true do |t|
+    t.date     "date"
+    t.integer  "trip_num"
+    t.float    "advance"
+    t.float    "reimbursement"
+    t.float    "gross_rev"
+    t.float    "net_rev"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
