@@ -7,9 +7,9 @@
   %br
   = @route.date
 %p
-  %strong= model_class.human_attribute_name(:trip_num) + ':'
+  %strong= model_class.human_attribute_name(:trip_number) + ':'
   %br
-  = @route.trip_num
+  = @route.trip_number
 %p
   %strong= model_class.human_attribute_name(:advance) + ':'
   %br
@@ -19,13 +19,17 @@
   %br
   = @route.reimbursement
 %p
-  %strong= model_class.human_attribute_name(:gross_rev) + ':'
+  %strong= model_class.human_attribute_name(:gross_revenue) + ':'
   %br
-  = @route.gross_rev
+  = @route.gross_revenue
 %p
-  %strong= model_class.human_attribute_name(:net_rev) + ':'
+  %strong= model_class.human_attribute_name(:net_revenue) + ':'
   %br
-  = @route.net_rev
+  = @route.net_revenue
+%p
+  %strong= model_class.human_attribute_name(:driver_id) + ':'
+  %br
+  = @route.driver_id
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), routes_path, :class => 'btn'

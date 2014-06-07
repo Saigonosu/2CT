@@ -4,9 +4,9 @@
     .controls
       = f.text_field :date, :class => 'text_field'
   .control-group
-    = f.label :trip_num, :class => 'control-label'
+    = f.label :trip_number, :class => 'control-label'
     .controls
-      = f.text_field :trip_num, :class => 'text_field'
+      = f.text_field :trip_number, :class => 'text_field'
   .control-group
     = f.label :advance, :class => 'control-label'
     .controls
@@ -16,13 +16,17 @@
     .controls
       = f.text_field :reimbursement, :class => 'text_field'
   .control-group
-    = f.label :gross_rev, :class => 'control-label'
+    = f.label :gross_revenue, :class => 'control-label'
     .controls
-      = f.text_field :gross_rev, :class => 'text_field'
+      = f.text_field :gross_revenue, :class => 'text_field'
   .control-group
-    = f.label :net_rev, :class => 'control-label'
+    = f.label :net_revenue, :class => 'control-label'
     .controls
-      = f.text_field :net_rev, :class => 'text_field'
+      = f.text_field :net_revenue, :class => 'text_field'
+  .control-group
+    = f.label :driver_id, :class => 'control-label'
+    .controls
+      = f.text_field :driver_id, :class => 'text_field'
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), routes_path, :class => 'btn'

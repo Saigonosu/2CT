@@ -21,14 +21,17 @@ ActiveRecord::Schema.define(version: 20140605210109) do
 
   create_table "routes", force: true do |t|
     t.date     "date"
-    t.integer  "trip_num"
+    t.integer  "trip_number"
     t.float    "advance"
     t.float    "reimbursement"
-    t.float    "gross_rev"
-    t.float    "net_rev"
+    t.float    "gross_revenue"
+    t.float    "net_revenue"
+    t.integer  "driver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "routes", ["driver_id"], name: "index_routes_on_driver_id"
 
   create_table "users", force: true do |t|
     t.string   "username"

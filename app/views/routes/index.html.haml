@@ -6,11 +6,12 @@
     %tr
       %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:date)
-      %th= model_class.human_attribute_name(:trip_num)
+      %th= model_class.human_attribute_name(:trip_number)
       %th= model_class.human_attribute_name(:advance)
       %th= model_class.human_attribute_name(:reimbursement)
-      %th= model_class.human_attribute_name(:gross_rev)
-      %th= model_class.human_attribute_name(:net_rev)
+      %th= model_class.human_attribute_name(:gross_revenue)
+      %th= model_class.human_attribute_name(:net_revenue)
+      %th= model_class.human_attribute_name(:driver_id)
       %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
@@ -18,11 +19,12 @@
       %tr
         %td= link_to route.id, route_path(route)
         %td= route.date
-        %td= route.trip_num
+        %td= route.trip_number
         %td= route.advance
         %td= route.reimbursement
-        %td= route.gross_rev
-        %td= route.net_rev
+        %td= route.gross_revenue
+        %td= route.net_revenue
+        %td= route.driver_id
         %td=l route.created_at
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_route_path(route), :class => 'btn btn-mini'
