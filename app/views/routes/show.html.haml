@@ -1,24 +1,33 @@
-%p#notice= notice
+- model_class = Route
+.page-header
+  %h1=t '.title', :default => model_class.model_name.human.titleize
 
 %p
-  %b Date:
+  %strong= model_class.human_attribute_name(:date) + ':'
+  %br
   = @route.date
 %p
-  %b Trip num:
+  %strong= model_class.human_attribute_name(:trip_num) + ':'
+  %br
   = @route.trip_num
 %p
-  %b Advance:
+  %strong= model_class.human_attribute_name(:advance) + ':'
+  %br
   = @route.advance
 %p
-  %b Reimbursement:
+  %strong= model_class.human_attribute_name(:reimbursement) + ':'
+  %br
   = @route.reimbursement
 %p
-  %b Gross rev:
+  %strong= model_class.human_attribute_name(:gross_rev) + ':'
+  %br
   = @route.gross_rev
 %p
-  %b Net rev:
+  %strong= model_class.human_attribute_name(:net_rev) + ':'
+  %br
   = @route.net_rev
 
-= link_to 'Edit', edit_route_path(@route)
-\|
-= link_to 'Back', routes_path
+.form-actions
+  = link_to t('.back', :default => t("helpers.links.back")), routes_path, :class => 'btn'
+  = link_to t('.edit', :default => t("helpers.links.edit")), edit_route_path(@route), :class => 'btn'
+  = link_to t('.destroy', :default => t("helpers.links.destroy")), route_path(@route), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'
