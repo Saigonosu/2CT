@@ -2,31 +2,31 @@
   .control-group
     = f.label :date, :class => 'control-label'
     .controls
-      = f.text_field :date, :class => 'text_field'
+      = f.date_select :date, :class => 'date_field'
   .control-group
     = f.label :trip_number, :class => 'control-label'
     .controls
-      = f.text_field :trip_number, :class => 'text_field'
+      = f.number_field :trip_number, :class => 'number_field'
   .control-group
     = f.label :advance, :class => 'control-label'
     .controls
-      = f.text_field :advance, :class => 'text_field'
+      = f.number_field :advance, :class => 'number_field'
   .control-group
     = f.label :reimbursement, :class => 'control-label'
     .controls
-      = f.text_field :reimbursement, :class => 'text_field'
+      = f.number_field :reimbursement, :class => 'number_field'
   .control-group
     = f.label :gross_revenue, :class => 'control-label'
     .controls
-      = f.text_field :gross_revenue, :class => 'text_field'
+      = f.number_field :gross_revenue, :class => 'number_field'
   .control-group
     = f.label :net_revenue, :class => 'control-label'
     .controls
-      = f.text_field :net_revenue, :class => 'text_field'
+      = f.number_field :net_revenue, :class => 'number_field'
   .control-group
     = f.label :driver_id, :class => 'control-label'
     .controls
-      = f.text_field :driver_id, :class => 'text_field'
+      = f.collection_select :driver_id, Driver.all, :id, :name, :class => 'text_field'
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), routes_path, :class => 'btn'
