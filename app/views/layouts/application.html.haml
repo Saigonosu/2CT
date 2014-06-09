@@ -52,6 +52,8 @@
         .span8.offset2
           = bootstrap_flash
           = yield
+        .span2
+          = render ('layouts/toolbar') if current_user
     
       %footer
         %p &copy; #{Trucking::NAME} 2014
