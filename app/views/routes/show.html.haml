@@ -30,6 +30,14 @@
   %strong= model_class.human_attribute_name(:driver_id) + ':'
   %br
   = @route.driver_id
+%p
+  %strong= model_class.human_attribute_name(:rented_trailer) + ':'
+  %br
+  = @route.rented_trailer
+%p
+  %strong= model_class.human_attribute_name(:trailer_rental) + ':'
+  %br
+  = @route.trailer_rental
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), routes_path, :class => 'btn'

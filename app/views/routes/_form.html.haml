@@ -2,7 +2,7 @@
   .control-group
     = f.label :date, :class => 'control-label'
     .controls
-      = f.date_select :date, :class => 'date_field'
+      = f.date_field :date, :class => 'date_field'
   .control-group
     = f.label :trip_number, :class => 'control-label'
     .controls
@@ -27,6 +27,14 @@
     = f.label :driver_id, :class => 'control-label'
     .controls
       = f.collection_select :driver_id, Driver.all, :id, :name, :class => 'text_field'
+  .control-group
+    = f.label :rented_trailer, :class => 'control-label'
+    .controls
+      = f.check_box :rented_trailer, :class => 'check_box'
+  .control-group
+    = f.label :trailer_rental, :class => 'control-label'
+    .controls
+      = f.number_field :trailer_rental, :class => 'number_field'
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), routes_path, :class => 'btn'
