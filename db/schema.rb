@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140605210109) do
+ActiveRecord::Schema.define(version: 20140609014319) do
 
   create_table "drivers", force: true do |t|
     t.string   "name"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20140605210109) do
     t.integer  "driver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "rented_trailer"
+    t.float    "trailer_rental"
   end
 
   add_index "routes", ["driver_id"], name: "index_routes_on_driver_id"

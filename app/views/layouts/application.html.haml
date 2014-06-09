@@ -35,24 +35,15 @@
               %li.right= link_to "Contact", "/home/contact"
             %ul.nav.pull-right
               %li
-                = link_to new_user_session_path do
-                  %i.icon-signin
-                  Sign in
+                = current_user ? render('layouts/loggedin') : render('layouts/signin')
 
     .container-fluid
 
       .row-fluid
-        -# .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
         .span8.offset2
           = bootstrap_flash
           = yield
-        .span2
+        -# .span2
           = render ('layouts/toolbar') if current_user
     
       %footer
