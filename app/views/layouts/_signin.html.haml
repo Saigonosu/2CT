@@ -1,4 +1,17 @@
-%li
-  = link_to new_user_session_path do
-    %i.icon-signin
-    Sign in
+%ul.nav.pull-right
+  - if current_user 
+    %li
+      = link_to drivers_path do
+        Drivers
+    %li
+      = link_to routes_path do
+        Routes
+    %li
+      = link_to destroy_user_session_path, method: :delete do
+        %i.icon-signout
+        Sign out
+  - else
+    %li
+      = link_to new_user_session_path do
+        %i.icon-signin
+        Sign in

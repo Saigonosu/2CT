@@ -33,9 +33,7 @@
               %li= link_to "Home", "/"
               %li= link_to "About", "/home/about"
               %li.right= link_to "Contact", "/home/contact"
-            %ul.nav.pull-right
-              %li
-                = current_user ? render('layouts/loggedin') : render('layouts/signin')
+            = render('layouts/signin')
 
     .container-fluid
 
