@@ -31,9 +31,9 @@
   %br
   = @route.driver_id
 %p
-  %strong= model_class.human_attribute_name(:rented_trailer) + ':'
+  %strong= model_class.human_attribute_name(:trailer_rented) + ':'
   %br
-  = @route.rented_trailer
+  = @route.trailer_rented_str
 %p
   %strong= model_class.human_attribute_name(:trailer_rental) + ':'
   %br

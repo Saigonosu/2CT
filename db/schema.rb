@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20140609014319) do
     t.integer  "driver_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "trailer_rented"
+    t.boolean  "trailer_rented",          default: false
     t.integer  "trailer_rental_cents",    default: 0,     null: false
     t.string   "trailer_rental_currency", default: "USD", null: false
   end
