@@ -11,7 +11,7 @@
       %th= model_class.human_attribute_name(:reimbursement)
       %th= model_class.human_attribute_name(:gross_revenue)
       %th= model_class.human_attribute_name(:net_revenue)
-      -# %th= model_class.human_attribute_name(:driver_id)
+      %th Driver
       %th= model_class.human_attribute_name(:trailer_rented)
       %th= model_class.human_attribute_name(:trailer_rental)
       -# %th= model_class.human_attribute_name(:created_at)
@@ -26,7 +26,7 @@
         %td= route.reimbursement
         %td= route.gross_revenue
         %td= route.net_revenue
-        -# %td= route.driver_id
+        %td= link_to route.driver.name, driver_path(route.driver.id)
         %td= route.trailer_rented_str
         %td= route.trailer_rental
         -# %td=l route.created_at

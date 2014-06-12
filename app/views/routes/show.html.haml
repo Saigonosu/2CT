@@ -27,9 +27,9 @@
   %br
   = @route.net_revenue
 %p
-  %strong= model_class.human_attribute_name(:driver_id) + ':'
+  %strong Driver
   %br
-  = @route.driver_id
+  = link_to @route.driver.name, driver_path(@route.driver.id)
 %p
   %strong= model_class.human_attribute_name(:trailer_rented) + ':'
   %br
