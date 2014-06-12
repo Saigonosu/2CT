@@ -4,32 +4,32 @@
 %table.table.table-striped
   %thead
     %tr
-      %th= model_class.human_attribute_name(:id)
+      -# %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:date)
       %th= model_class.human_attribute_name(:trip_number)
       %th= model_class.human_attribute_name(:advance)
       %th= model_class.human_attribute_name(:reimbursement)
       %th= model_class.human_attribute_name(:gross_revenue)
       %th= model_class.human_attribute_name(:net_revenue)
-      %th= model_class.human_attribute_name(:driver_id)
+      -# %th= model_class.human_attribute_name(:driver_id)
       %th= model_class.human_attribute_name(:trailer_rented)
       %th= model_class.human_attribute_name(:trailer_rental)
-      %th= model_class.human_attribute_name(:created_at)
+      -# %th= model_class.human_attribute_name(:created_at)
       %th=t '.actions', :default => t("helpers.actions")
   %tbody
     - @routes.each do |route|
       %tr
-        %td= link_to route.id, route_path(route)
+        -# %td= link_to route.id, route_path(route)
         %td= route.date
-        %td= route.trip_number
+        %td= link_to route.trip_number, route_path(route)
         %td= route.advance
         %td= route.reimbursement
         %td= route.gross_revenue
         %td= route.net_revenue
-        %td= route.driver_id
-        %td= route.trailer_rented
+        -# %td= route.driver_id
+        %td= route.trailer_rented_str
         %td= route.trailer_rental
-        %td=l route.created_at
+        -# %td=l route.created_at
         %td
           = link_to t('.edit', :default => t("helpers.links.edit")), edit_route_path(route), :class => 'btn btn-mini'
           = link_to t('.destroy', :default => t("helpers.links.destroy")), route_path(route), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger'
