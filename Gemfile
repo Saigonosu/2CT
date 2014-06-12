@@ -37,6 +37,8 @@ gem 'rspec-rails'
 
 gem 'font-awesome-rails'
 
+gem 'money-rails'
+
 group :test do
   gem 'cucumber-rails', require: false
 end

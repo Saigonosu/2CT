@@ -2,16 +2,18 @@
   - if current_user 
     %li
       = link_to drivers_path do
+        = fa_icon 'automobile'
         Drivers
     %li
       = link_to routes_path do
+        = fa_icon 'exchange'
         Routes
     %li
       = link_to destroy_user_session_path, method: :delete do
-        %i.icon-signout
+        = fa_icon 'sign-out'
         Sign out
   - else
     %li
       = link_to new_user_session_path do
-        %i.icon-signin
+        = fa_icon 'sign-in'
         Sign in

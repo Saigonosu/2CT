@@ -19,21 +19,8 @@ ActiveRecord::Schema.define(version: 20140609014319) do
     t.datetime "updated_at"
   end
 
-  create_table "routes", force: true do |t|
-    t.date     "date"
-    t.integer  "trip_number"
-    t.float    "advance"
-    t.float    "reimbursement"
-    t.float    "gross_revenue"
-    t.float    "net_revenue"
-    t.integer  "driver_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "rented_trailer"
-    t.float    "trailer_rental"
-  end
-
-  add_index "routes", ["driver_id"], name: "index_routes_on_driver_id"
+# Could not dump table "routes" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: true do |t|
     t.string   "username"
