@@ -1,12 +1,15 @@
 .page-header
   %h1= "Route ##{@route.trip_number}"
+  %h3
+    Driver:
+    = link_to @route.driver.name, driver_path(@route.driver)
 
 %table.table.table-striped
   %tbody
-    -@route.attributes.each do |key, value|
+    -@route.attributes_to_display.each do |key, value|
       %tr
-        %td= @route.class.human_attribute_name( key )
-        %td= value
+        %td= display_route_attribute(key)
+        %td= route_display_value(value)
         
 
 
