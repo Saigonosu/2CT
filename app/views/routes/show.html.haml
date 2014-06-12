@@ -13,19 +13,19 @@
 %p
   %strong= model_class.human_attribute_name(:advance) + ':'
   %br
-  = @route.advance
+  = humanized_money_with_symbol @route.advance
 %p
   %strong= model_class.human_attribute_name(:reimbursement) + ':'
   %br
-  = @route.reimbursement
+  = humanized_money_with_symbol @route.reimbursement
 %p
   %strong= model_class.human_attribute_name(:gross_revenue) + ':'
   %br
-  = @route.gross_revenue
+  = humanized_money_with_symbol @route.gross_revenue
 %p
   %strong= model_class.human_attribute_name(:net_revenue) + ':'
   %br
-  = @route.net_revenue
+  = humanized_money_with_symbol @route.net_revenue
 %p
   %strong Driver
   %br
@@ -37,7 +37,7 @@
 %p
   %strong= model_class.human_attribute_name(:trailer_rental) + ':'
   %br
-  = @route.trailer_rental
+  = humanized_money_with_symbol @route.trailer_rental
 
 .form-actions
   = link_to t('.back', :default => t("helpers.links.back")), routes_path, :class => 'btn'
